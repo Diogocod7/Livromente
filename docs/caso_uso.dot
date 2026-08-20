@@ -1,0 +1,14 @@
+digraph G {
+  graph [rankdir=LR, bgcolor="white", pad=0.3, nodesep=0.5, ranksep=0.8];
+  node [shape=ellipse, fontname="Arial", fontsize=11];
+  edge [fontname="Arial", fontsize=9];
+  ator [shape=box, label="Usuário da API", style="rounded"];
+  subgraph cluster_sistema {
+    label="Baozi Store — API REST"; fontname="Arial"; fontsize=14;
+    style="rounded";
+    c1 [label="Criar Cliente"]; c2 [label="Listar Clientes"]; c3 [label="Consultar Cliente por ID"]; c4 [label="Excluir Cliente"];
+    p1 [label="Criar Produto"]; p2 [label="Listar Produtos"]; p3 [label="Consultar Produto por ID"]; p4 [label="Excluir Produto"];
+    o1 [label="Criar Pedido"]; o2 [label="Listar Pedidos"]; o3 [label="Consultar Pedido por ID"]; o4 [label="Excluir Pedido"];
+  }
+  ator -> {c1 c2 c3 c4 p1 p2 p3 p4 o1 o2 o3 o4};
+}
